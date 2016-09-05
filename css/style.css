@@ -1,0 +1,29 @@
+.content {
+	width: 100%;
+    max-width: 960px;
+    height: 100%; 
+    margin: 0 auto;
+    background-color: gray;
+
+    height: 300px;
+}
+
+input[type=text] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('image/searchicon.png');
+    background-size: auto 55%;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 60%;
+}
