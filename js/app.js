@@ -4,6 +4,4 @@ function getRandomArticle () {
 	});
 }
 
-document.addEventListener("click", function(){
-    document.getElementById("searchTextField").innerHTML = "Hello World";
-});
+document.getElementById("searchTextField").onclick = getRandomArticle;
