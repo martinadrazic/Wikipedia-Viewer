@@ -38,3 +38,7 @@ input[type=text] {
 input[type=text]:focus {
     width: 60%;
 }
+
+.search-list h3, p {
+	color: white;
+}
