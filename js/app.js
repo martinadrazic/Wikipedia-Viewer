@@ -6,28 +6,30 @@ function search () {
 
 		var content = "";
 			
-		for (var i = 1; i < json.length; i++) {
-			for (var a = 0; a < 10; a++) {
-				content += creatLink(json.list[i][a]);
+		for (var i = 1; i < json.length - 2; i++) {
+			for (var a = 0; a < json[i].length; a++) {
+				content += creatLink();
 			}
 		}
 		
 		$('#links').html(content);
+
+		function creatLink(){
+			var newDiv =
+							'<div class="col-md-12">' +
+								'<div class="col-md-8">' +
+									'<a href="'+json[3][a]+'" target="_blanck"><h3 class="title">'+ json[i][a] +'</h3>' +
+									'<p class="description">'+ json[i + 1][a] +'</p></a>' +
+								'</div>' +
+							'</div>' ;
+			return newDiv;
+		}
 	});
 }
 
 search();
 
-function creatLink(x){
-	var newDiv =
-					'<div class="col-md-12">' +
-						'<div class="col-md-8">' +
-							'<div class="title"><h3>'+ x +'</h3></div>' +
-							'<div class="description"><p>'+ x +'</p></div>' +
-						'</div>' +
-					'</div>' ;
-	return newDiv;
-}
+
 
 
 

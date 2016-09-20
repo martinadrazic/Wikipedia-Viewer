@@ -4,8 +4,19 @@
     height: 100%; 
     margin: 0 auto;
     background-color: gray;
+}
 
-    height: 300px;
+.random-entry {
+	text-align: center;
+	font-size: 20px;
+}
+
+.random-entry p {
+	color: white;
+}
+
+.exactly-entry {
+	text-align: center;
 }
 
 input[type=text] {
