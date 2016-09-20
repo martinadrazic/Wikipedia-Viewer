@@ -1,4 +1,4 @@
-var inputText =
+var inputText 
 
 function search () {
 	inputText = document.getElementById('searchTextField').value;
@@ -7,15 +7,13 @@ function search () {
 
 		var content = "";
 			
-		for (var a = 0; a < json.length; a++) {
-			content += creatLink(a);
+		for (var i = 0; i < json.length + 5; i++) {
+			content += creatLink(i);
 		}
 		
 		$('#links').html(content);
 	});
 }
-
-search();
 
 function creatLink (x) {
 	$.getJSON("https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&search="+inputText+"&namespace=0&format=json", function(json){
@@ -30,6 +28,7 @@ function creatLink (x) {
 	});
 }
 
+search();
 
 
 
