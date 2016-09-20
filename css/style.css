@@ -41,4 +41,5 @@ input[type=text]:focus {
 
 .search-list h3, p {
 	color: white;
+	text-decoration: none;
 }
