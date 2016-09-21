@@ -61,6 +61,7 @@ input[type=text]:focus {
 }
 
 #searchButton {
+	margin-top: 10px;
     color: #224C02;
 	padding: 12px;
 	font-size: 16px;
@@ -115,10 +116,6 @@ input[type=text]:focus {
 	height: 1px;
     background-color: white;
     margin: 0px auto;
-}
-
-.search-list a, h2:visited {
-	color: gray; 
 }
 
 
