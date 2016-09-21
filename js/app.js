@@ -11,7 +11,7 @@ function search() {
 			content += createText(json, i);
 		}
 		if (content === "") {
-			content = "There were no results matching this search text.";
+			content = "There were no results matching this entry.";
 		}
 
 		$('#searchedText').html(content);
@@ -27,7 +27,7 @@ function createText(json, x) {
 	var newDiv =
 		'<div class="col-md-12">' +
 		'<div class="col-md-8 search-list">' +
-		'<a href="' + json[3][x] + '" target="_blanck"><h3 class="title">' + json[1][x] + '</h3>' + '<p class="description">' + json[2][x] + '</p></a>' +
+		'<a href="' + json[3][x] + '" target="_blanck"><h2 class="title">' + json[1][x] + '</h2>' + '<p class="description">' + json[2][x] + '</p></a>' +
 		'<div class="delimiter"></div>' +
 		'</div>' +
 		'</div>';
