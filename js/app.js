@@ -11,7 +11,7 @@ function search() {
 			content += createText(json, i);
 		}
 		if (content === "") {
-			content = "There were no results matching this entry.";
+			content = "There are no results matching this entry.";
 		}
 
 		$('#searchedText').html(content);
@@ -21,13 +21,14 @@ function search() {
 function createText(json, x) {
 
 	if (json[2][x] === "") {
-		json[2][x] = "For more text click here.";
+		json[2][x] = "For more info click here.";
 	}
 
 	var newDiv =
 		'<div class="col-md-12">' +
 		'<div class="col-md-8 search-list">' +
-		'<a href="' + json[3][x] + '" target="_blanck"><h2 class="title">' + json[1][x] + '</h2>' + '<p class="description">' + json[2][x] + '</p></a>' +
+		'<a href="' + json[3][x] + '" target="_blanck"><h2 class="title">' + json[1][x] + '</h2>' + 
+		'<p class="description">' + json[2][x] + '</p></a>' +
 		'<div class="delimiter"></div>' +
 		'</div>' +
 		'</div>';
@@ -39,12 +40,7 @@ document.getElementById("searchTextField")
 		// event.preventDefault();
 		if (event.keyCode == 13) {
 			document.getElementById("searchButton").click();
+		} else if (event.keyCode == 27) {
+			document.getElementById("searchTextField").value = '';
 		}
 	});
-
-function onkeypressed(evt, input) {
-	var code = evt.charCode || evt.keyCode;
-	if (code == 27) {
-		input.value = '';
-	}
-}

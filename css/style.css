@@ -117,12 +117,8 @@ input[type=text]:focus {
     margin: 0px auto;
 }
 
-
-
-/*.search-list:visited {
-	color: #268477; 
-	background-color: transparent; 
-	text-decoration: underline;
+.search-list a, h2:visited {
+	color: gray; 
 }
-*/
+
 
