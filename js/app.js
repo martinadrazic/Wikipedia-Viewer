@@ -27,7 +27,7 @@ function createText(json, x) {
 	var newDiv =
 		'<div class="col-md-12">' +
 		'<div class="col-md-8 search-list">' +
-		'<a href="' + json[3][x] + '" target="_blanck"><h2 class="title">' + json[1][x] + '</h2>' + 
+		'<a href="' + json[3][x] + '" target="_blanck"><h2 class="title">' + json[1][x] + '</h2>' +
 		'<p class="description">' + json[2][x] + '</p></a>' +
 		'<div class="delimiter"></div>' +
 		'</div>' +
@@ -37,7 +37,6 @@ function createText(json, x) {
 
 document.getElementById("searchTextField")
 	.addEventListener("keyup", function(event) {
-		// event.preventDefault();
 		if (event.keyCode == 13) {
 			document.getElementById("searchButton").click();
 		} else if (event.keyCode == 27) {
